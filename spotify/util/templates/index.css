@@ -1,0 +1,130 @@
+/*/*/*.landing-page-child {
+    position: absolute;
+    right: -273px;
+    bottom: 551px;
+    width: 2193px;
+    height: 237px;
+  }
+  .rectangle-icon,
+  .rectangle-icon1,
+  .rectangle-icon2 {
+    position: absolute;
+    top: 317px;
+    left: 452px;
+    border-radius: var(--br-xl);
+    width: 249px;
+    height: 58px;
+  }
+  .rectangle-icon1,
+  .rectangle-icon2 {
+    top: 445px;
+  }
+  .rectangle-icon2 {
+    top: 381px;
+  }
+  .landing-page-item {
+    position: absolute;
+    top: 742px;
+    left: 110px;
+    width: 300px;
+    height: 300px;
+  }
+  .landing-page-girl-1-icon {
+    position: absolute;
+    top: 474px;
+    left: 0;
+    width: 496px;
+    height: 730px;
+    object-fit: cover;
+  }
+  .discover-your-next {
+    position: absolute;
+    top: 42px;
+    left: 95px;
+    font-size: 72px;
+    font-family: var(--font-poppins);
+    display: inline-block;
+    width: 1347px;
+    height: 191px;
+  }
+  .enter-a-song {
+    margin: 0;
+  }
+  .enter-a-song-container {
+    position: absolute;
+    top: 174px;
+    left: 185px;
+    font-size: 36px;
+    display: inline-block;
+    width: 1735px;
+    height: 525px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: var(--font-poppins);
+  }
+  .landing-page-inner {
+    position: absolute;
+    top: 1019px;
+    left: 880px;
+    width: 200px;
+    height: 200px;
+  }
+  .ellipse-icon,
+  .rectangle-icon3 {
+    position: absolute;
+    top: 633px;
+    left: 1502px;
+    width: 500px;
+    height: 500px;
+  }
+  .rectangle-icon3 {
+    top: 364px;
+    left: 1301px;
+    border-radius: var(--br-xl);
+    width: 316px;
+    height: 74px;
+  }
+  .artist-name,
+  .song-name {
+    position: absolute;
+    top: 325px;
+    left: 292px;
+    color: #fbf3f3;
+    display: inline-block;
+    width: 147px;
+    height: 34px;
+  }
+  .artist-name {
+    top: 392px;
+    color: #fbf4f4;
+    width: 145px;
+  }
+  .number-of-similar,
+  .recommended-tracks {
+    position: absolute;
+    top: 460px;
+    left: 216px;
+    color: var(--color-white);
+    display: inline-block;
+    width: 297px;
+    height: 33px;
+  }
+  .recommended-tracks {
+    top: 389px;
+    left: 1333px;
+    text-align: center;
+    width: 252px;
+    height: 34px;
+  }
+  .landing-page {
+    position: relative;
+    background-color: #000;
+    width: 100%;
+    height: 1080px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-lg);
+    color: var(--color-whitesmoke);
+    font-family: var(--font-roboto);
+  }
+  */
+*/*/

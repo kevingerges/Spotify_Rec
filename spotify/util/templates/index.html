@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Track Recommendation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+  />
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="./global.css" />
+    
+</head>
+<body>
+    <form id="recommendation-form">
+        <label class="song-name" for="song-name">Song Name:</label>
+        <input class="song-name" type="text" id="song-name" name="song_name"><br>
+        <label class="artist-name" for="artist-name">Artist Name:</label>
+        <input  class="artist-name" type="text" id="artist-name" name="artist_name"><br>
+        <label class="number-of-similar" for="num-tracks">Number of Similar Tracks:</label>
+        <input   class="number-of-similar" type="number" id="num-tracks" name="num_similar_tracks" min="1" max="40"><br>
+        <input  class="recommended-tracks" type="submit" value="Generate Recommendation">
+    </form>
+
+        <div class="landing-page">
+          <img class="landing-page-child" alt="" src="./public/rectangle-1.svg" />
+    
+          <img class="rectangle-icon" alt="" src="./public/rectangle.svg" />
+    
+          <img class="rectangle-icon1" alt="" src="./public/rectangle.svg" />
+    
+          <img class="rectangle-icon2" alt="" src="./public/rectangle.svg" />
+    
+          <img class="landing-page-item" alt="" src="./public/ellipse-2.svg" />
+    
+          <img
+            class="landing-page-girl-1-icon"
+            alt=""
+            src="./public/landingpagegirl-1@2x.png"
+          />
+    
+          <div class="discover-your-next">Discover Your Next Perfect Playlist</div>
+          <div class="enter-a-song-container">
+            <p class="enter-a-song">
+              Enter a song or artist name to receive song recommendations of the
+              same taste and vibe
+            </p>
+          </div>
+          <img class="landing-page-inner" alt="" src="./public/ellipse-3.svg" />
+    
+          <img class="ellipse-icon" alt="" src="./public/ellipse-4.svg" />
+    
+          <img class="rectangle-icon3" alt="" src="./public/rectangle1.svg" />
+
+    <h2>Recommended Tracks</h2>
+    <ul id="recommended-tracks"></ul>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+        $('#recommendation-form').on('submit', function(event) {
+            event.preventDefault();
+            var songName = $('#song-name').val();
+            var artistName = $('#artist-name').val();
+            var numTracks = $('#num-tracks').val();
+            var requestData = {
+                'song_name': songName,
+                'artist_name': artistName,
+                'num_similar_tracks': numTracks
+            };
+
+            $.ajax({
+                url: '/recommendation',
+                type: 'POST',
+                dataType: 'json',
+                data: JSON.stringify(requestData),
+                contentType: 'application/json',
+                success: function(response) {
+
+                    $('#recommended-tracks').empty();
+
+                    response.similar_songs.forEach(function(track) {
+                        $('#recommended-tracks').append('<li>' + track.name + ' by ' + track.artist + '</li>');
+                    });
+                },
+                error: function(error) {
+                    console.error('Error:', error);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+

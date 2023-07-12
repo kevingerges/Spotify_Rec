@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Track Recommendation</title>
+</head>
+<body>
+    <h1>Spotify Track Recommendation</h1>
+
+    <h2>Recommended Tracks</h2>
+    <ul>
+        {% for track in similar_songs %}
+            <li>{{ track.name }} by {{ track.artist }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
